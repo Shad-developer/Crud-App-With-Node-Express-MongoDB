@@ -1,0 +1,57 @@
+<div class="col-5 m-auto mt-5 mb-5">
+    <div class="card">
+        <div class="card-header bg-success">
+        <h5 class="text-light"><i class="fa fa-edit text-light"> Edit User</i> (<%= user.name %>)</h3>
+        </div>
+        <div class="card-body">
+            <form action="/update/<%= user._id %>" method="post" id="add-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input 
+                    type="text" 
+                    class="form-control" 
+                    id="Name" 
+                    name="name" 
+                    value="<%= user.name  %>"
+                    aria-describedby="NameHelp" 
+                    placeholder="Enter Name..." 
+                    required>
+                  </div>
+                <div class="mb-3">
+                  <label for="Email" class="form-label">Email</label>
+                  <input 
+                  type="email" 
+                  class="form-control" 
+                  id="Email" 
+                  name="email" 
+                  value="<%= user.email %>"
+                  aria-describedby="EmailHelp"  
+                  placeholder="Enter Email..." 
+                  required>
+                </div>
+                <div class="mb-3">
+                  <label for="Phone" class="form-label">Phone</label>
+                  <input 
+                  type="tel" 
+                  class="form-control" 
+                  id="Phone" 
+                  name="phone" 
+                  value="<%= user.phone %>"
+                  placeholder="Enter Phone..." 
+                  required>
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Select Image</label>
+                  <input 
+                  type="file" 
+                  class="form-control" 
+                  id="image" 
+                  name="image">
+                  <img src="/img/<%= user.image %>" width="100" class="img-thumbnail">
+                  <input type="hidden" name="old_image" value="<%= user.image %>">
+                </div>
+                <button type="submit" class="btn btn-success">Update</button>
+              </form>    
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,54 @@
+<div class="col-5 m-auto mt-5 mb-5">
+<div class="card">
+    <div class="card-header bg-primary">
+    <h5><i class="fa fa-plus text-light"> Add User</i></h3>
+    </div>
+    <div class="card-body">
+        <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input 
+                type="text" 
+                class="form-control" 
+                id="Name" 
+                name="name" 
+                aria-describedby="NameHelp" 
+                placeholder="Enter Name..." 
+                required>
+              </div>
+            <div class="mb-3">
+              <label for="Email" class="form-label">Email</label>
+              <input 
+              type="email" 
+              class="form-control" 
+              id="Email" 
+              name="email" 
+              aria-describedby="EmailHelp"  
+              placeholder="Enter Email..." 
+              required>
+            </div>
+            <div class="mb-3">
+              <label for="Phone" class="form-label">Phone</label>
+              <input 
+              type="tel" 
+              class="form-control" 
+              id="Phone" 
+              name="phone" 
+              placeholder="Enter Phone..." 
+              required>
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Select Image</label>
+              <input 
+              type="file" 
+              class="form-control" 
+              id="image" 
+              name="image" 
+              required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+    </div>
+</div>
+</div>
